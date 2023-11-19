@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset = 'utf-8'>
+        <title>main page</title>
+    </head>
+    <body>
+        메인 페이지
+        {% if user.is_active%}
+        <p>안녕하세요 {{user.nickname}}님</p>
+        <a href="user/logout">로그아웃</a>
+
+        {%else %}
+        <a href="user/login">로그인</a>
+        <a href="user/register">회원가입</a>
+        {%endif%}
+    </body>
+</html>
